@@ -1,0 +1,36 @@
+{
+  "name": "app-language-kit",
+  "version": "1.0.0",
+  "description": "Reusable language switch for React Native / Expo apps: a Language page (Same as phone, then each language in its own script), the choice saved on the phone, a translator hook with {slots}, English fallback for missing words, and ready common words in English, Tamil and Telugu. No app's own words are built in.",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./core": "./src/core.ts",
+    "./common": "./src/common.ts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "sideEffects": false,
+  "license": "MIT",
+  "author": "Yuvaraj Salla",
+  "peerDependencies": {
+    "@expo/vector-icons": ">=14",
+    "react": ">=18",
+    "react-native": ">=0.74"
+  },
+  "devDependencies": {
+    "@expo/vector-icons": "^15.1.1",
+    "@types/react": "~19.3.0",
+    "react": "19.3.0",
+    "react-native": "0.88.1",
+    "typescript": "~6.0.3",
+    "vitest": "^2.1.9"
+  }
+}
