@@ -54,7 +54,7 @@ describe('translator', () => {
 describe('common words', () => {
   it('Tamil and Telugu have every common word', () => {
     expect(missingWords(COMMON_WORDS, 'en')).toEqual({});
-    for (const code of ['ta', 'te']) for (const k of Object.keys(COMMON_EN)) expect(COMMON_WORDS[code]![k]!.length).toBeGreaterThan(0);
+    for (const code of ['ta', 'te', 'hi']) for (const k of Object.keys(COMMON_EN)) expect(COMMON_WORDS[code]![k]!.length).toBeGreaterThan(0);
   });
   it('languages show their own names', () => {
     expect(LANGUAGES.ta.name).toBe('தமிழ்');

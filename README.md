@@ -5,7 +5,7 @@ A language switch for React Native / Expo apps.
 - A ready **Language page**: "Same as phone" first, then each language in its own script with its English name under it. Tap a row to choose it. No pop-ups.
 - The choice is **saved on the phone** and the app changes at once, with no restart.
 - `useT()` translates with `{slots}`. A missing word shows the fallback (English) word, so nothing breaks.
-- **Common words** (Back, Save, Cancel, Done, Settings ...) come ready in English, Tamil and Telugu.
+- **Common words** (Back, Save, Cancel, Done, Settings ...) come ready in English, Tamil, Telugu and Hindi.
 - **Opt-in and generic**: no app's own words are built in. `enabled={false}` keeps an app in its fallback language.
 
 ## Use

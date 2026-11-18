@@ -2,12 +2,13 @@ import type { LanguageInfo } from './core';
 
 /**
  * Ready languages: apps pick the ones they offer, in the order they want them listed.
- * Add more here (Hindi, Kannada, Malayalam ...) as apps need them.
+ * Add more here (Kannada, Malayalam, Marathi ...) as apps need them.
  */
 export const LANGUAGES = {
   en: { code: 'en', name: 'English', english: 'English' },
   ta: { code: 'ta', name: 'தமிழ்', english: 'Tamil' },
   te: { code: 'te', name: 'తెలుగు', english: 'Telugu' },
+  hi: { code: 'hi', name: 'हिन्दी', english: 'Hindi' },
 } as const satisfies Record<string, LanguageInfo>;
 
 /**
@@ -100,5 +101,33 @@ export const COMMON_TE: Record<CommonKey, string> = {
   'common.other': 'ఇతర',
 };
 
+export const COMMON_HI: Record<CommonKey, string> = {
+  'language.title': 'भाषा',
+  'language.sameAsPhone': 'फ़ोन की भाषा',
+  'language.now': 'अभी: {name}',
+  'language.note': 'आपके लिखे नाम वैसे ही रहेंगे।',
+  'common.back': 'वापस',
+  'common.save': 'सहेजें',
+  'common.cancel': 'रद्द करें',
+  'common.done': 'हो गया',
+  'common.delete': 'हटाएँ',
+  'common.edit': 'बदलें',
+  'common.add': 'जोड़ें',
+  'common.search': 'खोजें',
+  'common.settings': 'सेटिंग्स',
+  'common.home': 'होम',
+  'common.yes': 'हाँ',
+  'common.no': 'नहीं',
+  'common.ok': 'ठीक है',
+  'common.close': 'बंद करें',
+  'common.retry': 'फिर से कोशिश करें',
+  'common.loading': 'लोड हो रहा है…',
+  'common.today': 'आज',
+  'common.yesterday': 'कल',
+  'common.all': 'सभी',
+  'common.clear': 'साफ़ करें',
+  'common.other': 'अन्य',
+};
+
 /** Common words by language code. */
-export const COMMON_WORDS: Readonly<Record<string, Readonly<Record<string, string>>>> = { en: COMMON_EN, ta: COMMON_TA, te: COMMON_TE };
+export const COMMON_WORDS: Readonly<Record<string, Readonly<Record<string, string>>>> = { en: COMMON_EN, ta: COMMON_TA, te: COMMON_TE, hi: COMMON_HI };
