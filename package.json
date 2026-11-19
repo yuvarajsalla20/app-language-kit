@@ -1,6 +1,6 @@
 {
   "name": "app-language-kit",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Reusable language switch for React Native / Expo apps: a Language page (Same as phone, then each language in its own script), the choice saved on the phone, a translator hook with {slots}, English fallback for missing words, and ready common words in English, Tamil, Telugu and Hindi. No app's own words are built in.",
   "main": "src/index.ts",
   "types": "src/index.ts",
