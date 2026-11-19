@@ -32,7 +32,7 @@ export const { LanguageProvider, useT, useLanguage, useChoiceLabel, LanguagePage
 Wrap the app in `<LanguageProvider enabled={flag}>`. In a screen: `const t = useT(); t('home.count', { n: 3 })`.
 Outside screens (PDFs, notifications): `translate('home.title')`.
 
-Show `<LanguagePage />` as a Settings page and `useChoiceLabel()` as that row's value.
+Show `<LanguagePage />` as a Settings page (optional `cardStyle` prop adds your own style to its card, e.g. a border; nothing by default) and `useChoiceLabel()` as that row's value.
 
 ## Rules
 

@@ -1,6 +1,6 @@
 import Feather from '@expo/vector-icons/Feather';
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ComponentType, type ReactNode } from 'react';
-import { AppState, Pressable, StyleSheet, Text as RNText, View, type TextProps } from 'react-native';
+import { AppState, Pressable, StyleSheet, Text as RNText, View, type StyleProp, type TextProps, type ViewStyle } from 'react-native';
 import { COMMON_EN, COMMON_WORDS, type CommonKey } from './common';
 import { isLanguageChoice, makeTranslator, resolveLanguage, type LanguageChoice, type LanguageInfo, type Params, type Words } from './core';
 
@@ -149,7 +149,8 @@ export function createLanguageKit<W extends Words>(options: LanguageKitOptions<W
   }
 
   /** The Language page body: "Same as phone", then each language in its own script with English under it. */
-  function LanguagePage({ note }: { note?: string | null }) {
+  /** `cardStyle` (optional, nothing by default) is added to the card, e.g. an app's own border: { borderWidth, borderColor }. */
+  function LanguagePage({ note, cardStyle }: { note?: string | null; cardStyle?: StyleProp<ViewStyle> }) {
     const p = usePageColors();
     const { choice, setChoice, phoneLang, t } = useLanguage();
     const rows: { value: LanguageChoice; label: string; detail: string }[] = [
@@ -159,7 +160,7 @@ export function createLanguageKit<W extends Words>(options: LanguageKitOptions<W
     const shownNote = note === undefined ? t('language.note') : note;
     return (
       <>
-        <View style={[styles.card, { backgroundColor: p.card }]} accessibilityRole="radiogroup" accessibilityLabel={t('language.title')}>
+        <View style={[styles.card, { backgroundColor: p.card }, cardStyle]} accessibilityRole="radiogroup" accessibilityLabel={t('language.title')}>
           {rows.map((r, i) => {
             const on = choice === r.value;
             return (
